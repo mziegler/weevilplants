@@ -10,7 +10,8 @@
 
 <script type="text/javascript">
 
-var chart = d3.chart.dependencyWheel();
+var chart = d3.chart.dependencyWheel()
+  .width(1400);
 d3.select('#chart_placeholder')
   .datum(data)
   .call(chart);
