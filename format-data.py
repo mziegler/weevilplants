@@ -224,9 +224,18 @@ outfilename = 'new-data.js'
 size = 1000
 
 with open(outfilename, 'w') as f:
-  for name, children in zip(names, mtx):
-    for childname, value in zip(names, children):
-      pass
+  for name, row in zip(names, mtx):
+    children = []
+    for childname, value in zip(names, row):
+      if value:
+        children.append(childname)
+    f.write('{{"name":"{0}", "size":"{1}", "imports":[{2}]}},\n'.format(
+      name,
+      size,
+      ','.join(['"{0}"'.format(n) for n in children])
+      ))
+      
+      
       
 # http://bl.ocks.org/mbostock/raw/7607999/300d1ecafc25d8f40d619c28c9e98b1d09237105/readme-flare-imports.json
 # http://bl.ocks.org/mbostock/7607999  
