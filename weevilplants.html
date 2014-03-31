@@ -1,6 +1,44 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
+<head>
+<title>Weevils on plants!</title>
 <style>
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: steelblue;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+div#description {
+  max-width: 500px;
+  padding: 25px;
+  margin-bottom: 10px;
+  color: #333; 
+}
+
+span#title {
+  font-size: 140%;
+  display: block;
+}
+
+div#footer {
+  padding: 5px;
+  margin-top: 40px;
+  padding-bottom: 30px;
+  font-size: 75%;
+  color: #888;
+  right: 0;
+  position: absolute;
+  max-width: 400px;
+}
 
 .node {
   font: 300 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -25,11 +63,11 @@
 }
 
 .node--source {
-  fill: #000;
+  fill: #333;
 }
 
 .node--target {
-  fill: #000;
+  fill: #333;
 }
 
 .link--source,
@@ -47,13 +85,20 @@
 }
 
 </style>
+</head>
 <body>
+
+<div id="description">
+<span id="title">Weevils on plants</span>
+Here's some text that will tell you what this visualization is.
+</div>
+
 <script src="d3.min.js"></script>
 <script>
 
-var diameter = 960,
+var diameter = 1000,
     radius = diameter / 2,
-    innerRadius = radius - 120;
+    innerRadius = radius - 150;
 
 var cluster = d3.layout.cluster()
     .size([360, innerRadius])
@@ -174,3 +219,9 @@ function packageImports(nodes) {
 
 </script>
 
+<div id="footer">
+Built by Julia Janicki and Matt Ziegler with <a href="http://d3js.org/" target="_blank">D3.js</a>, based on Mike Bostok's <a href="http://bl.ocks.org/mbostock/1044242">hierarchical edge bundling</a> example.
+</div>
+
+</body>
+</head>
