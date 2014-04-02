@@ -5,7 +5,7 @@
 <style>
 
 html{
-	background-color: white;
+	background-color: gray;
 }
 
 body {
@@ -49,6 +49,7 @@ div#footer {
 .node {
   font: 300 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
   fill: #bbb;
+  
 }
 
 .node:hover {
@@ -56,8 +57,8 @@ div#footer {
 }
 
 .link {
-  stroke: steelblue;
-  stroke-opacity: .4;
+  stroke:#15bc37; 
+  /* connector line colors */
   fill: none;
   pointer-events: none;
 }
@@ -83,18 +84,19 @@ div#footer {
 }
 
 .link--source {
-  stroke: #0ff; /*#0AFAF6;*/
+  stroke: #fff945; /*#0AFAF6;*/
+  /* highlight lines */
 }
 
 .link--target {
-  stroke: #0FF;
+  stroke: #fff945;
 }
 
 </style>
 </head>
 
 <body>
-
+<img src="header2.png"/>
 <div id="description">
 <span id="title">Weevils on plants</span>
 Here's some text that will tell you what this visualization is.
